@@ -10,8 +10,6 @@ app.use(express.urlencoded({}));
 app.use(express.json());
 
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
-// let MONGODB_URI = "mongodb://user1:password2@ds155086.mlab.com:55086/heroku_g2wfklq8";
-
 mongoose.connect(MONGODB_URI);
 
 require("./routes/apiRoutes")(app);
