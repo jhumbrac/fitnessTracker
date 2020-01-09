@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({}));
 app.use(express.json());
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
